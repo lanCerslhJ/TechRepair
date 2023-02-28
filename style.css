@@ -1,0 +1,272 @@
+/* Adjust the background color with a linear gradient */
+body{
+    background: linear-gradient(0.25turn, lightpink, white, powderblue);
+}
+
+/* modify the container div with a static width of 1024px and center it*/
+.container{
+    width: 1024px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* --------------------------------- */
+/* CSS for the Header, Logo, and NAV */
+/* --------------------------------- */
+
+/* The header box will need to display the content side by side using flexbox and justify content ... Hint: flex, center the items, 
+    and add some space from the outside edges */
+header{
+    display: flex;
+    justify-content: space-between;
+    /* This align items */
+    align-items: center;
+    border-bottom: 1px solid rgb(0, 131, 253);
+    
+}
+
+/* adjust the size of the logo image (150 - 225 px) */
+.logoIcon img{
+    width: 150px;
+}
+
+/* Style the look of the buttons (color, border, padding etc.), display, and their position  */
+.navButton{
+    border: 2px solid rgb(0, 131, 253);
+    padding: 12px 25px;
+    display: inline-block;
+    width: 120px;
+    text-align: center;
+    position: relative;
+}
+
+/* Remove the hypertext look from the anchor element, change the font, and font color */
+.navButton a{
+    text-decoration: none;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgb(0, 131, 253);
+}
+
+/* Style (position, border, shadow) and hide the drop down box */
+.dropDown{
+    position: absolute;
+    margin-left: -27px;
+    margin-top: 10px;
+    box-shadow: 5px 5px 10px black;
+    background-color: white;
+    z-index: 1;
+    display: none;
+    margin-top: 15px;
+}
+
+/* This will override the previous class selector during hover to display the dropdown. */
+.navButton:hover .dropDown{
+    display: block;
+}
+
+/* Change the background color of the dropdown menu and possibly remove the border  */
+.dropDown .navButton{
+    border: 1px solid white;
+}
+
+.navButton:hover {
+    background-color: rgba(154, 157, 165, 0.431);
+    transition-duration: 200ms;
+}
+
+/* style the color of the anchor elements inside the drop down*/
+.dropDown .navButton a{
+    color: rgb(0, 0, 0);
+}
+
+
+/* Bonus add a hover effect to the dropdown menu with a color change of the background */
+.dropDown .navButton:hover{
+    transition-duration: 50ms;
+    background-color: rgba(154, 157, 165, 0.431);
+}
+
+/* --------------------------------------- */
+/* CSS for the Main Section of the Website */
+/* ---------------------------------------- */
+
+/* Create a min-height of 300, add flex, and align everything to the center */
+main{
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+}
+
+/* Add a flex ratio of 2 and some padding */
+.heroBox1{
+    flex: 2;
+    padding: 3rem;
+}
+
+/* Add a flex ratio of 1  */
+.heroBox2{
+    flex: 1;
+}
+
+/* Stretch the image to 100% of the div and add a drop-shawdow filter */
+.heroBox2 img{
+    padding: 25px;
+    width: 100%;
+    flex: 1;
+    filter: drop-shadow(10px 10px 4px rgba(0,0, 0, 0.815));
+    margin-left: -20px;
+}
+
+/* Modify the font size, font family, padding and add a text shadow */
+h1{
+    font-size: 45px;
+    padding: 5px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif cursive;
+    padding-bottom: 0.25rem;
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.488);
+}
+/* Modify the font size, font family, top margin */
+h2{
+    font-family: monospace;
+}
+/* modify the line-height and padding on the bottom */
+p{
+    padding-top: 10px;
+    line-height: 1.75rem;
+    padding-bottom: 5px;
+}
+
+.myButton{
+    padding-top: 20px;
+    
+}
+
+.myButton1:hover {
+    color: rgb(252, 0, 0);
+    transition-duration: 300ms;
+    background-color: #f9f9f9;
+}
+
+.myButton1{
+    background-color: rgba(44, 40, 40, 0.388);
+    color: rgb(240, 240, 240);     
+    border-radius: 20px;
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 2px solid rgba(88, 171, 239, 0.755);
+}
+
+/* ---------------------------------------- */
+/* CSS for the Cards Section of the Website */
+/* ---------------------------------------- */
+
+/* Set the cards section to flex, justify the content, and align to center */
+.cards{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+/* Add a background image from the images folder with citation comment, set the background size to cover the space, adjust the background position (bottom), set a min height of 250px, set a width of 30%, set a border radius, and add a box-shadow */
+.card1{
+    background-image: url(images/CompRepairResources/800px-Books-business-computer-connection-459654.jpg);
+    min-height: 250px;
+    /* This line will tell the image to cover the space available */
+    background-size: cover;
+    /* This line will tell hte image to position from the bottom corner of the space provided */
+    background-position: bottom;
+    width: 30%;
+    border-radius: 1rem;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.227);
+}
+
+/* Add a background image from the images folder with citation commment, set the background size to cover the space, ajust the background position (bottom), set a min height of 250px, set a width of 30%, set a border radius, and add a box-shadow */
+.card2{
+    background-image: url(images/CompRepairResources/motherboard.jpeg);
+    min-height: 250px;
+    /* This line will tell the image to cover the space available */
+    background-size: cover;
+    /* This line will tell hte image to position from the bottom corner of the space provided */
+    background-position: bottom;
+    width: 30%;
+    border-radius: 1rem;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.227);
+}
+
+/* Add a background image from the images folder with citation comment, set the background size to cover the space, adjust the background position (bottom), set a min height of 250px, set a width of 30%, set a border radius, and add a box-shadow */
+.card3{
+    background-image: url(images/CompRepairResources/iphone.jpeg);
+    min-height: 250px;
+    /* This line will tell the image to cover the space available */
+    background-size: cover;
+    /* This line will tell hte image to position from the bottom corner of the space provided */
+    background-position: bottom;
+    width: 30%;
+    border-radius: 1rem;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.227);
+}
+
+/* Change the font size using rem, change the line height, adjust the margin, and change the font family */
+.cards p{
+    font-size: 1rem;
+    line-height: 1.5rem;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+/* Add padding to the top of the icon (0.75 rem), adjust the font size to 100px (or equivalent rem), change the color to something light (ex. rgb(236, 216, 207) )  */
+.cards i{
+    padding-top: 0.75rem;
+    font-size: 100px;
+    color: rgb(236, 241, 237);
+}
+/* remove the underline from the hyperlink, change the color to something light or even just white, add text shadow */
+.cards a{
+    text-decoration: none;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+}
+
+.cards h2{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 30px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+
+/* ----------------------------------------------- */
+/* CSS for the Testimonials Section of the Website */
+/* ----------------------------------------------- */
+.testimonials{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 4rem;
+}
+
+.tBox{
+    width: 40%;
+    border: 3px solid white;
+    padding: 2rem;
+    margin-bottom: 2rem; 
+}
+
+
+/* ----------------------------------------- */
+/* CSS for the Footer Section of the Website */
+/* ----------------------------------------- */
+footer{
+    background-color: rgba(232, 152, 178, 0.878);
+    color: rgb(255, 0, 0);
+    text-align: center;
+    vertical-align: middle;
+    margin-bottom: 1rem;
+}
+
+/* About Web Page */
+.aboutBody{
+    background: linear-gradient(0.25turn, rgb(78, 78, 221), pink);
